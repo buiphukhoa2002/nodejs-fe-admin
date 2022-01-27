@@ -1,0 +1,35 @@
+.seat__container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  /* grid-template-rows: repeat(auto-fill, 120px); */
+  /* grid-row-gap: 0.5em; */
+  grid-column-gap: 1em;
+}
+
+.seat {
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  background-color: rgb(123, 122, 122);
+  color: #fff;
+  font-size: 1rem;
+}
+
+.unavailable__seat {
+  background-color: rgb(232, 76, 76) !important;
+  cursor: no-drop;
+  opacity: 0.5;
+}
+
+.currently__chosen__seat {
+  background-color: rgb(18, 176, 18) !important;
+}
+
+.vip__seat {
+  background-color: rgb(247, 195, 0);
+}

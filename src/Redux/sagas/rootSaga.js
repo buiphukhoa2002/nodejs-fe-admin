@@ -1,0 +1,118 @@
+import { all } from "redux-saga/effects";
+import {
+  watchCreateCinemaRoomSaga,
+  watchDeleteCinemaRoomSaga,
+  watchGetCinemaRoomDetailSaga,
+  watchGetCinemaRoomListSaga,
+  watchUpdateCinemaRoomSaga,
+} from "./cinemaRoomSaga";
+import {
+  watchCreateCinemaSaga,
+  watchDeleteCinemaSaga,
+  watchGetCinemaDetailSaga,
+  watchGetCinemaListSaga,
+  watchUpdateCinemaSaga,
+  watchUploadCinemaImageSaga,
+} from "./cinemaSaga";
+import {
+  watchCreateCinemaSystemSaga,
+  watchDeleteCinemaSystemSaga,
+  watchGetCinemaSystemDetailSaga,
+  watchGetCinemaSystemListSaga,
+  watchUpdateCinemaSystemSaga,
+  watchUploadCinemaSystemPosterSaga,
+} from "./cinemaSystemSaga";
+import {
+  watchCreateMovieSaga,
+  watchDeleteMovieSaga,
+  watchGetMovieDetailSaga,
+  watchGetMovieListSaga,
+  watchUpdateMovieSaga,
+  watchUploadMoviePosterSaga,
+} from "./movieSaga";
+import {
+  watchCreateMultipleSeatsSaga,
+  watchCreateSeatSaga,
+  watchDeleteSeatSaga,
+  watchGetSeatDetailSaga,
+  watchGetSeatListByShowtimeSaga,
+  watchUpdateSeatSaga,
+} from "./seatSaga";
+import {
+  watchCreateShowtimeSaga,
+  watchDeleteShowtimeSaga,
+  watchGetShowtimeDetailSaga,
+  watchGetShowtimeListSaga,
+  watchUpdateShowtimeSaga,
+} from "./showTimeSaga";
+import {
+  watchCreateTicketSaga,
+  watchDeleteTicketSaga,
+  watchGetTicketDetailSaga,
+  watchGetTicketListSaga,
+  watchUpdateTicketSaga,
+} from "./ticketSaga";
+import {
+  watchCreateUserSaga,
+  watchDeleteUserSaga,
+  watchGetUserDetailSaga,
+  watchGetUserListSaga,
+  watchGetUserLoginSaga,
+  watchSignInSaga,
+  watchUpdateUserAvatarSaga,
+  watchUpdateUserPasswordSaga,
+  watchUpdateUserSaga,
+} from "./userSaga";
+
+export function* rootSaga() {
+  yield all([
+    watchGetUserLoginSaga(),
+    watchSignInSaga(),
+    watchCreateUserSaga(),
+    watchDeleteUserSaga(),
+    watchGetUserDetailSaga(),
+    watchGetUserListSaga(),
+    watchUpdateUserSaga(),
+    watchUpdateUserPasswordSaga(),
+    watchUpdateUserAvatarSaga(),
+    watchCreateMovieSaga(),
+    watchDeleteMovieSaga(),
+    watchGetMovieDetailSaga(),
+    watchGetMovieListSaga(),
+    watchUpdateMovieSaga(),
+    watchUploadMoviePosterSaga(),
+    watchCreateCinemaSystemSaga(),
+    watchDeleteCinemaSystemSaga(),
+    watchGetCinemaSystemDetailSaga(),
+    watchGetCinemaSystemListSaga(),
+    watchUpdateCinemaSystemSaga(),
+    watchUploadCinemaSystemPosterSaga(),
+    watchCreateCinemaSaga(),
+    watchDeleteCinemaSaga(),
+    watchGetCinemaDetailSaga(),
+    watchGetCinemaListSaga(),
+    watchUpdateCinemaSaga(),
+    watchUploadCinemaImageSaga(),
+    watchGetCinemaRoomListSaga(),
+    watchCreateCinemaRoomSaga(),
+    watchDeleteCinemaRoomSaga(),
+    watchGetCinemaRoomDetailSaga(),
+    watchUpdateCinemaRoomSaga(),
+    watchCreateShowtimeSaga(),
+    watchDeleteShowtimeSaga(),
+    watchGetShowtimeDetailSaga(),
+    watchGetShowtimeListSaga(),
+    watchUpdateShowtimeSaga(),
+    watchCreateSeatSaga(),
+    watchDeleteSeatSaga(),
+    watchGetSeatDetailSaga(),
+    watchGetSeatListByShowtimeSaga(),
+    watchUpdateSeatSaga(),
+    watchCreateMultipleSeatsSaga(),
+    watchCreateTicketSaga(),
+    watchDeleteTicketSaga(),
+    watchGetTicketDetailSaga(),
+    watchGetTicketListSaga(),
+    watchUpdateTicketSaga(),
+  ]);
+}
